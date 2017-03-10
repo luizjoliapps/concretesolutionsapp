@@ -26,7 +26,6 @@ consign()
 	.include('api/routes')
 	.then('api/models')
 	.then('api/controllers')
-	.then('config/dbConnection.js')
 	.into(app);
 
 /* exportar o objeto app */

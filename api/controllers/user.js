@@ -9,8 +9,7 @@ var segredo = 'Concrete.Solutions.Bh.2017';
 //Regra de negócio de cadastro de usuário
 module.exports.SignUp = function (application, req, res) {
     
-    var connection = application.config.dbConnection;    
-    var userDAO = new application.api.models.UserDAO(connection);
+    var userDAO = new application.api.models.UserDAO();
 
     //busca informação passada pelo json na requisição
     var user = req.body;    
@@ -58,9 +57,8 @@ module.exports.SignUp = function (application, req, res) {
 
 //Regra de negócio de autenticação de usuário
 module.exports.SignIn = function (application, req, res) {
-    
-    var connection = application.config.dbConnection;
-    var userDAO = new application.api.models.UserDAO(connection);
+        
+    var userDAO = new application.api.models.UserDAO();
 
     //busca informação passada pelo json na requisição
     var user = req.body;
@@ -85,9 +83,8 @@ module.exports.SignIn = function (application, req, res) {
 };
 
 module.exports.FindUser = function(application, req, res){
-    
-    var connection = application.config.dbConnection;
-    var userDAO = new application.api.models.UserDAO(connection);
+        
+    var userDAO = new application.api.models.UserDAO();
 
     //Verifica se possui a propriedade authorization no cabeçalho da requisição
     if(!req.headers.authorization){
