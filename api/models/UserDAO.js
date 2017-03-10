@@ -84,14 +84,14 @@ UserDAO.prototype.FindUser = function (id, token, req, res) {
     mongodb.MongoClient.connect(uri, function (err, db) {
 
         var userC = db.collection('user');
-
+        console.log(id);
         userC.find({ Id: id }).toArray(function (err, result) {
 
             if (err) {
                 db.close();
                 res.status(500).json({ "mensagem": "mensagem de erro" });
             }
-
+            console.log(result);
             if (result.length > 0) {
                 var userDb = result[0];
 

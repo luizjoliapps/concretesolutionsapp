@@ -91,6 +91,8 @@ module.exports.FindUser = function(application, req, res){
         res.status(500).json({"mensagem": "Não autorizado"});
     }
 
+    console.log(req.query);
+
     //preenche variáveis para que a busca do usuário seja possível
     var token = req.headers.authorization;
     var id = req.query.id;
