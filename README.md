@@ -20,4 +20,10 @@ Heroku : Endereço - http://concretesolutionsapp.herokuapp.com/
 Task runner para realização de build:
 CODESHIP
 
+URLS da aplicação.
+
+POST:http://concretesolutionsapp.herokuapp.com/api/user/signup
+POST:http://concretesolutionsapp.herokuapp.com/api/user/signin
+GET: http://concretesolutionsapp.herokuapp.com/api/user/finduser
+
 
