@@ -13,13 +13,6 @@ var expressValidator = require('express-validator');
 /* iniciar o objeto do express */
 var app = express();
 
-/* setar as variáveis 'view engine' e 'views' do express */
-app.set('view engine', 'ejs');
-app.set('views', './api/views');
-
-/* configurar o middleware express.static */
-app.use(express.static('./api/public'));
-
 /* configurar o middleware body-parser */
 app.use(bodyParser.urlencoded({extended: true}));
 
