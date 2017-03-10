@@ -5,8 +5,8 @@ var connMongoDB = function () {
     var db = new mongo.Db(
         'concretesolutionsdb',
         new mongo.Server(
-            'localhost',
-            27017,
+            'ds127190.mlab.com',
+            27190,
             {}
         ),
         {}
