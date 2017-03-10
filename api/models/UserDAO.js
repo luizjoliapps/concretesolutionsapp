@@ -58,7 +58,7 @@ UserDAO.prototype.SignIn = function (user, req, res) {
                     userDb.LastLogin = new Date();
 
                     //Atualiza data do ultimo login
-                    user.update(
+                    userC.update(
                         { Id: userDb.Id },
                         { LastLogin: userDb.LastLogin });
 
